@@ -56,7 +56,8 @@ switch hookMethod
         toolset = get_param(modelName, 'CMakeToolset');
         build_configuration = get_param(modelName, 'CMakeBuildConfiguration');
         
-        version = str2double(ver('MATLAB').Version);
+        version_struct = ver('MATLAB');
+        version = str2double(version_struct.Version);
         
         major_version = floor(version);
         minor_version = num2str((version - major_version) * 100);
